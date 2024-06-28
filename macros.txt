@@ -1,0 +1,17 @@
+\apart:{\mathrel\#}
+\colim:{\operatornamewithlimits{colim}\limits}
+
+\C:{\mathcal{C}}
+\E:{\mathcal{E}}
+\F:{\mathcal{F}}
+\J:{\mathcal{J}}
+
+\Set:{\mathbf{Set}}
+\FinSet:{\mathbf{FinSet}}
+\Sh:{\mathbf{Sh}}
+\Psh:{\mathbf{Psh}}
+\Cat:{\mathbf{Cat}}
+\Topos:{\mathbf{Topos}}
+
+\Type:{\mathbf{Type}}
+\Prop:{\mathbf{Prop}}

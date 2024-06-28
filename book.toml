@@ -1,0 +1,25 @@
+[book]
+title = "Topos Reference"
+authors = ["finegeometer"]
+language = "en"
+multilingual = false
+src = "src"
+
+[build]
+build-dir="docs"
+extra-watch-dirs = ["./macros.txt"]
+
+[preprocessor.katex]
+after = ["links"]
+macros = "macros.txt"
+
+[output.html]
+default-theme="navy"
+preferred-dark-theme="navy"
+# git-repository-url=""
+# site-url=""
+
+[output.html.fold]
+enable = true
+level = 1
+
