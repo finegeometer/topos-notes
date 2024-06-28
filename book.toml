@@ -6,7 +6,6 @@ multilingual = false
 src = "src"
 
 [build]
-build-dir="docs"
 extra-watch-dirs = ["./macros.txt"]
 
 [preprocessor.katex]
