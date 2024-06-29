@@ -2,6 +2,10 @@
 
 [Intro](./intro.md)
 
+- [Tutorial](./tutorial.md)
+    - [How to Build a Topos](./tutorial/classifying.md)
+        - [Alternatives](./tutorial/alternatives.md)
+
 - [Notation](./notation.md)
 - [Reference](./reference.md)
     - [Classes of Topos](./reference/toposes_general.md)
@@ -29,3 +33,7 @@
         - [Essential Geometric Morphisms](./reference/properties/essential.md)
         - [Geometric Embeddings](./reference/properties/embedding.md)
     - [External vs. Internal](./reference/ext_int.md)
+- [Designing a Topos-Theoretic Proof Assistant]()
+    - [Can λ-calculus Be Interpreted in Topoi?]() <!-- No, but almost. -->
+    - [Modes as Meta-Contexts]() <!-- mode = list of ctx->* and ctx->ctx. But what about the desire to create modalities inside a ctx? -->
+

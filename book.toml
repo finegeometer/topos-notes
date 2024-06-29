@@ -15,8 +15,8 @@ macros = "macros.txt"
 [output.html]
 default-theme="navy"
 preferred-dark-theme="navy"
-# git-repository-url=""
-# site-url=""
+git-repository-url="https://github.com/finegeometer/topos-notes"
+site-url="https://finegeometer.github.io/topos-notes/"
 
 [output.html.fold]
 enable = true
