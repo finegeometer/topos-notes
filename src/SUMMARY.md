@@ -37,6 +37,8 @@
 - [Designing a Topos-Theoretic Proof Assistant]()
     - [Can λ-calculus Be Interpreted in Topoi?]() <!-- No, but almost. -->
     - [Modes as Meta-Contexts]() <!-- mode = list of ctx->* and ctx->ctx. But what about the desire to create modalities inside a ctx? -->
-- [Quantum Mechanics via Noncommutative SDG](./quantum.md)
+- [Noncommutative Synthetic Differential Geometry](./quantum.md)
+    - [Monoidal Structure](./quantum/monoidal.md)
+    - [Quantum Mechanics](./quantum/quantum.md)
 
 

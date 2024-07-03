@@ -6,8 +6,11 @@
 \F:{\mathcal{F}}
 \J:{\mathcal{J}}
 
+\ZZ:{\mathbb{Z}}
+
 \Set:{\mathbf{Set}}
 \FinSet:{\mathbf{FinSet}}
+\Ringfp:{\mathbf{Ring}_{\mathrm{fp}}}
 \Sh:{\mathbf{Sh}}
 \Psh:{\mathbf{Psh}}
 \Cat:{\mathbf{Cat}}
@@ -15,3 +18,6 @@
 
 \Type:{\mathbf{Type}}
 \Prop:{\mathbf{Prop}}
+
+\wand:{\,-\!\!*\,}
+\yo:{よ}
