@@ -10,7 +10,7 @@
     \\ &\forall A, B \in P,                & \red{A}, \red{B}                       &\vdash \bigvee_{C \leq A, B} \red{C}
     \\ &\forall A \triangleleft\mathcal{B},& \red{A}                                &\vdash \bigvee_{B \in \mathcal{B}} \red{B}
 \end{align*}$$ |
-| [Sheaves on a locale]((./toposes/sheaf_locale.md)) | $$\Sh(L)$$ | Points of $L$ | $$\small\begin{align*}
+| [Sheaves on a locale]((./toposes/sheaf_locale.md)) | $$\Sh(O(L))$$ | Points of $L$ | $$\small\begin{align*}
     &\forall A \in O(L),                   &                                        &\vdash \red{A} : \Prop
     \\ &\forall A \leq B,                  & \red{A}                                &\vdash \red{B}
     \\ &                                   &                                        &\vdash \red{\top}
