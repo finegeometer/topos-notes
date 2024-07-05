@@ -29,6 +29,8 @@
         - [Classifying Topos for the Theory of Decidable Objects](./reference/toposes/classify_decidable_objects.md)
         - [Schanuel Topos](./reference/toposes/schanuel.md)
         - [Topos of Species](./reference/toposes/species.md)
+
+        - [Johnstone's Topological Topos](./reference/toposes/johnstone.md)
     - [Properties](./reference/properties.md)
         - [Geometric Morphisms, Transformations, and Adjunctions](./reference/properties/adjunction.md)
         - [Essential Geometric Morphisms](./reference/properties/essential.md)

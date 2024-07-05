@@ -32,3 +32,4 @@
     \\ & \forall n \in \mathbb{N},         & x_0 \dots x_{n-1} : X                  &\vdash \exists y : X, \bigwedge_{i < n} y \apart x_n
 \end{align*}$$ |
 | [Topos of Species](./toposes/species.md) | $$[\FinSet_0, \Set]$$ | TODO | TODO |
+| [Johnstone's Topological Topos](./toposes/johnstone.md) | TODO | TODO | TODO |

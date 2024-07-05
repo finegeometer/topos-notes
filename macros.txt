@@ -6,9 +6,10 @@
 \F:{\mathcal{F}}
 \J:{\mathcal{J}}
 
+\NN:{\mathbb{N}}
 \ZZ:{\mathbb{Z}}
-\RR:{\mathbb{R}}
 \QQ:{\mathbb{Q}}
+\RR:{\mathbb{R}}
 
 \Set:{\mathbf{Set}}
 \FinSet:{\mathbf{FinSet}}
