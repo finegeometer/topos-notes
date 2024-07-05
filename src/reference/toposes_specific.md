@@ -10,7 +10,7 @@
     \\ n : \mathbb{N}, P_n &\vdash P_{n+1}
     \\                     &\vdash \exists n : \mathbb{N}, P_n
 \end{align*}$$ |
-| — | $$\Sh((\mathbb{R}, \geq)) \\ \Sh((\mathbb{Q}, \geq))$$ | Upper Dedekind Cuts | $$\small\begin{align*}
+| [—](./reference/toposes/upper-reals.md) | $$\Sh((\mathbb{R}, \geq)) \\ \Sh((\mathbb{Q}, \geq))$$ | Upper Dedekind Cuts | $$\small\begin{align*}
        q : \mathbb{Q}                              &\vdash P_q : \Prop
     \\ q_1,q_2 : \mathbb{Q}, q_1 \leq q_2, P_{q_1} &\vdash P_{q_2}
     \\                                             &\vdash \exists q \in \mathbb{Q}, P_q

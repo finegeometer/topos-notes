@@ -24,6 +24,7 @@
         - [Initial Topos](./reference/toposes/initial.md)
         - [Sierpinski Topos](./reference/toposes/sierpinski.md)
         - [Topos of Trees](./reference/toposes/trees.md)
+        - [Classifying Topos for Upper Dedekind Reals](./reference/toposes/upper-reals.md)
         - [Classifying Topos for the Theory of Objects](./reference/toposes/classify_objects.md)
         - [Classifying Topos for the Theory of Decidable Objects](./reference/toposes/classify_decidable_objects.md)
         - [Schanuel Topos](./reference/toposes/schanuel.md)

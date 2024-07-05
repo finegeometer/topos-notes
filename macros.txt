@@ -7,6 +7,8 @@
 \J:{\mathcal{J}}
 
 \ZZ:{\mathbb{Z}}
+\RR:{\mathbb{R}}
+\QQ:{\mathbb{Q}}
 
 \Set:{\mathbf{Set}}
 \FinSet:{\mathbf{FinSet}}
