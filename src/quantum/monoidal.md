@@ -5,7 +5,8 @@ Let $\C$ be any monoidal category, and consider its topos of presheaves. Let $\y
 We have a monoidal closed structure on $\Psh(\C)$, given by Day convolution.
 
 $$\begin{align*}
-    X * Y &= c \mapsto \int^{c_1, c_2 \in \C} \hom_\C(c, c_1 \otimes c_2) \times X(c_1) \times Y(c_2)
+    I &= c \mapsto \yo(I)
+    \\ X * Y &= c \mapsto \int^{c_1, c_2 \in \C} \hom_\C(c, c_1 \otimes c_2) \times X(c_1) \times Y(c_2)
     \\ X \wand Y &= c \mapsto \int_{c_1 \in \C} X(c_1) \to Y(c \otimes c_1)
 \end{align*}$$
 
@@ -25,38 +26,30 @@ $$\begin{align*}
     \\ &= \yo(b^a)
 \end{align*}$$
 
-## Ring
+## Useful Facts
 
-Take the case where $\C^{op} = \Ringfp$, so $\Psh(\C)$ is the classifying topos of rings.
-Let $R = \yo(\ZZ[x])$ be the generic ring.
+- Just like $\to$, $\wand$ preserves limits in the second argument, and maps colimits in the first to limits. For example:
+    $$\begin{align*}
+        &W \vdash (X + Y) \wand Z
+        \\ &\iff X + Y \vdash W \wand Z
+        \\ &\iff (X \vdash W \wand Z) \times (Y \vdash W \wand Z)
+        \\ &\iff (W \vdash X \wand Z) \times (W \vdash Y \wand Z)
+        \\ &\iff W \vdash (X \wand Z) \times (Y \wand Z)
+    \end{align*}$$
+    - A point of caution: This means $2 \wand X$ is $X \times X$, rather than $X * X$ as you might expect.
 
-We compute:
-$$\begin{align*}
-    R * R &= \yo(\ZZ[x]) * \yo(\ZZ[x])
-    \\ &= \yo(\ZZ[x] \otimes \ZZ[x])
-    \\ &= \yo(\ZZ[x,y,xy=yx])
-    \\ &= \{(x,y) \in R^2 \mid xy=yx\}
-\end{align*}$$
+### Affine Facts
 
-More generally, $X * Y$ tends to be the subset of $X \times Y$ where, intuitively, "everything in $X$ commutes with everything in $Y$".
+Suppose the monoidal structure is affine, so $I \cong 1$.
 
-A point of caution: $2 \wand X$ is equivalent to $X \times X$, not $X * X$.
-More generally, $X + Y \wand Z \cong (X \wand Z) \times (Y \wand Z)$.
+- If a map is defined in the empty context, it doesn't matter whether it uses $\to$ or $\wand$.
+$$1 \vdash A \to B \iff A \vdash B \iff I \vdash A \wand B$$
+- $A * B$ maps into $A \times B$. I suspect this is an injection, making $A * B$ a subset of $A \times B$.
+- $A \to B$ maps into $A \wand B$. I suspect this is an surjection, making $A \wand B$ a quotient of $A \to B$.
+- For any $f, g : (a : A) \to B a$, we have $(a : A) * (f(a) = g(a)) \cong (a : A) \times (f(a) = g(a))$.
+    So we don't have to worry about which product we use while defining subsets by equations. We can just write $\{x \in X | \dots\}$.
+    - In the forward direction, we have the inclusion map.
+    - In the backwards direction, it suffices to prove $(a : A) \to (x, y : B(a)) \to x = y \to A * (x = y)$.
+        By the $=$-eliminator, it in turn suffices to prove $(a : A) \to (x : B(a)) \to A * (x = x)$.
+        And that's easy.
 
-### Quasicoherence.
-
-Theorem 4.10 of [this paper](https://rawgit.com/iblech/internal-methods/master/paper-qcoh.pdf)
-gives us a way to understand function types involving $R$.
-
-For instance, we find that every function $f : R \to R$ has the form $f(x) = c_{0,0} + c_{1,0} x c_{1,1} + c_{2,0} x c_{2,1} x c_{2,2} + \dots$.
-A fully general noncommutative polynomial.
-
-I expect there to be an analogous theorem for monoidal function types.
-Something to the effect of $A \cong ((A \stackrel{R\text{-alg}}{\wand} R) \wand R)$
-
-This would have the following consequences:
-- Every function $f : R \wand R$ has the form $f(x) = c_0 + c_1 x + c_2 x^2 + \dots$.
-- Every function $f : R^2 \wand R$ has the form $f(x) = c + c_1 x + c_2 y + c_{11} x^2 + c_{12} xy + c_{21} yx + c_{22} yy + \dots$.
-A noncommutative polynomial, but where the variables commute with the coefficients.
-- And every function $f : \{x \in R | x^2 = 0\} \wand R$ has the form $f(x) = a + bx$.
-This is essential for synthetic differential geometry, as the "$\to$" version is far less nice.

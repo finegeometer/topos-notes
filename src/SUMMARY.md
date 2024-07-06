@@ -42,6 +42,7 @@
     - [Modes as Meta-Contexts]() <!-- mode = list of ctx->* and ctx->ctx. But what about the desire to create modalities inside a ctx? -->
 - [Noncommutative Synthetic Differential Geometry](./quantum.md)
     - [Monoidal Structure](./quantum/monoidal.md)
+    - [Synthetic Notions](./quantum/synthetic.md)
     - [Quantum Mechanics](./quantum/quantum.md)
 
 

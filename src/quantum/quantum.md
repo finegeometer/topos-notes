@@ -1,74 +1,10 @@
 # Quantum Mechanics
 
-Work in the classifying topos of star-rings. Not *commutative* star-rings, just star-rings.
-
-I assume my [predicted monoidal version of quasicoherence](./monoidal.md#quasicoherence) holds.
-
-## Basics
-
-Let's examine some important objects in the topos.
-
-First, there's $C$, the generic star-ring.
-Quasicoherence shows that $C \wand C \cong C[x,x^*]$.
-
-Next, let's consider $R = \{x \in C | x^* = x\}$, and $I = \{x \in C | x^* = -x\}$.
-Assuming the existence of $\frac{1}{2} \in C$, we can define the real and imaginary parts,
-$\Re : C \to R$ and $\Im : C \to I$, as $\Re(x) = \frac{x + x^*}{2}$ and $\Im(x) = \frac{x - x^*}{2}$.
-This exhibits $C$ as a product $R \times I$.
-If we further assume the existence of $i \in C$, we have $R \cong I$, so $C \cong R^2$.
-
-It's interesting that this is $R \times I$, and not $\{(x,y) \in R \times I \mid [x,y] = 0\}$.
-The real and imaginary parts of a complex number *don't have to commute with each other!*
-
-A bit more thought shows that $[\Re(x),\Im(x)] = [\frac{x + x^*}{2}, \frac{x - x^*}{2}] = \frac{[x,x] - [x,x^*] + [x^*,x] - [x^*,x^*]}{4} = \frac{[x^*,x]}{2}$.
-So the noncommutativity of the real and imaginary parts is captured by the value of $[x^*,x] \in R$.
-
-(This does mean we don't have $x^*x = xx^*$ in general. So assuming $\frac{1}{2}$ exists, we define $\lVert x \rVert^2 = \frac{x^*x + xx^*}{2}$.)
-
-Functions $R \wand C$ are polynomials. Functions $R \wand R$ are polynomials with real coefficients.
-Functions $C \wand R$ are a bit more subtle: they're polynomials in $x$ and $x^*$,
-where the coefficient of e.g. $x^*xx$ is conjugate to the coefficient of $x^*x^*x$.
-
-## Calculus
-
-Next, let's consider infinitesimals.
-
-Let $D = \{x \in R \mid x^2 = 0\}$.
-Quasicoherence shows that functions $D \wand C$ are uniquely of the form $\epsilon \mapsto a + b\epsilon$.
-So we can define the derivative of a function $f : R \wand C$ at $t$ to be the unique value $f'(t)$ such that $f(t+\epsilon) = f(t) + \epsilon f'(t)$ for all $\epsilon \in D$.
-
-Similarly, we can consider the set $iD = \{x \in I \mid x^2 = 0\}$.
-Again, every function $iD \wand C$ is uniquely of the form $\epsilon \mapsto a + b\epsilon$.
-This allows us to define the "imaginary derivative".
-
-Functions $R \wand R$ have derivative in $R$, and functions $R \wand I$ have derivative in $I$.
-But functions $I \wand R$ have imaginary derivative in $i$, and functions $I \wand I$ have imaginary derivative in $R$.
-
----
-
-More generally, suppose we have a function $f : X \wand Y$.
-This lifts to a function $(D \wand X) \wand (D \wand Y)$.
-Defining $T_x X = \{f : D \wand X \mid f(0) = x\}$, we have a function $((x : X) \times T_x X) \wand ((y : Y) \times T_y Y)$.
-The first component just returns $f(x)$, so the second is a function $Df : ((x : X) \times T_x X) \wand (T_{f(x)} Y)$.
-
-<!-- More generally, suppose we have a function $f : X \to Y$.
-This lifts to a function $Df : (x : X) \to T_x X \to T_{f(x)} Y$, where $T_x X = \{f : D \to X \mid f(0) = x\}$ is the tangent space at $x$. -->
-
-This works no matter *what* kind of types $X$ and $Y$ are! You just have to be careful about their tangent spaces.
-Common types like $C$, $R$, $I$, et cetera are their own tangent spaces, but other types might be weirder.
-
-
-<!-- If we want to take derivatives of functions $Z(C) \to C$, we need to specify the direction of the derivative. -->
-
-## Positivity
-
-TODO
+Work in the classifying topos of star-rings.
 
 ## Distributions
 
 Define $\mathcal{D}(X) = ((X \wand C) \stackrel{linear}{\wand} C)$.
-
-TODO: What kind of linearity?
 
 We can lift functions to act on distributions:
 $$\begin{align*}
@@ -83,7 +19,6 @@ $$\begin{align*}
     \\ f &: R \wand X
     \\ f'&(t) = v(f(t))
 \end{align*}$$
-And assume $X$ is sufficiently nice. (TODO: How nice? Vector space? Affine space? Microlinear space? Any space?)
 
 We can rephrase the differential equation as follows.
 $$\forall^* \epsilon \in D, f(t + \epsilon) = f(t) + \epsilon v(f(t))$$
@@ -171,7 +106,7 @@ those which only depend on terms with an equal number of $x$s and $x^*$s.
 For the classical harmonic oscillator, we restrict the phase space from $C$ to $\{x \in C | [x,x^*] = 0\}$.
 At the level of distributions, this means the distribution should return the same output for e.g. $xx^*$ and $x^*x$.
 
-So(see TODO section) a static distributional solution is defined by its action on each $\lVert x \rVert^{2n}$, or equivalently by its action on $(x^*)^n x^n$.
+So a static distributional solution is defined by its action on each $\lVert x \rVert^{2n}$, or equivalently by its action on $(x^*)^n x^n$.
 
 If we want a *probability distribution*, we further want $d(1) = 1$ and $d(P^*P) \geq 0$ for all $P$.
 
@@ -231,3 +166,4 @@ is a Gaussian, given by $\frac{e^{-x^2}}{\sqrt\pi}$.
 # TODO
 
 - Am I absolutely sure I've used $*$ vs $\times$ and $\wand$ vs $\to$ in the right places?
+    - Among other things, check $Df$ derivation on previous page — do I have to start with a $\wand$ function?
