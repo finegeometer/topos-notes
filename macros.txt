@@ -22,5 +22,7 @@
 \Type:{\mathbf{Type}}
 \Prop:{\mathbf{Prop}}
 
+\interp:{\llbracket #1 \rrbracket}
+
 \wand:{\,-\!\!*\,}
 \yo:{よ}

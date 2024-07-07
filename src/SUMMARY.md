@@ -37,9 +37,7 @@
         - [Geometric Embeddings](./reference/properties/embedding.md)
     - [External vs. Internal](./reference/ext_int.md)
 # Explorations
-- [Designing a Topos-Theoretic Proof Assistant]()
-    - [Can λ-calculus Be Interpreted in Topoi?]() <!-- No, but almost. -->
-    - [Modes as Meta-Contexts]() <!-- mode = list of ctx->* and ctx->ctx. But what about the desire to create modalities inside a ctx? -->
+- [Designing a Topos-Theoretic Proof Assistant](./lang.md)
 - [Noncommutative Synthetic Differential Geometry](./quantum.md)
     - [Monoidal Structure](./quantum/monoidal.md)
     - [Synthetic Notions](./quantum/synthetic.md)
