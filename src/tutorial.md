@@ -1,5 +1,9 @@
 # Tutorial
 
+This is (the beginnings of) an introduction to topos theory. If you know topos theory, skip it.
+
+---
+
 From my perspective, topos theory is about exploring different mathematical worlds, and the relationships between them.
 
 Each world follows all the same laws of logic and set theory that we're used to.
